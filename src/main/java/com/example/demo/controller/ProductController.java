@@ -33,12 +33,12 @@ public class ProductController {
         product.setQuantity(productDTO.getQuantity());
         product.setDescription(productDTO.getDescription());
         productService.updateProduct(product);
-        return "redirect:/admin/products";
+        return "redirect:/products";
     }
     @GetMapping("/products/delete/{id}")
     public String deletePro(@PathVariable long id){
         productService.removeProductById(id);
-        return "redirect:/admin/products";
+        return "redirect:/products";
     }
 
     @GetMapping("/products/update/{id}")
